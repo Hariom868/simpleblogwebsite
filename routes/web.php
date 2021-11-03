@@ -23,7 +23,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     $employeeData = DB::table('posts')->paginate(6);
     return view('dashboard', compact('employeeData'));
 })->name('dashboard');
-Route::middleware(['auth:sanctum', 'verified'])->get('/editblog', function () {
+Route::middlewn0are(['auth:sanctum', 'verified'])->get('/editblog', function () {
     $data = DB::table('posts')->paginate(6); 
     return view('posts.index',compact('data'));
 })->name('editblog');
